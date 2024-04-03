@@ -25,12 +25,18 @@ public class SingleTon {
 		
 		//How to break singleton class
 		//Get the constructor and store it in constructor class
-		Constructor<TesterDesign> con= TesterDesign.class.getDeclaredConstructor();
-		//change the accessibility as we are getting exception
-		con.setAccessible(true);
-		//get new instance using con
-		TesterDesign tester= con.newInstance();
+//		Constructor<TesterDesign> con= TesterDesign.class.getDeclaredConstructor();
+//		//change the accessibility as we are getting exception
+//		con.setAccessible(true);
+//		//get new instance using con
+//		TesterDesign tester= con.newInstance();
+//		
+//		System.out.println(tester.hashCode());
 		
-		System.out.println(tester.hashCode());
+		System.out.println("Example of ENUM");
+		EnumDemo tester1=EnumDemo.INSTANCE;
+		System.out.println(tester1.hashCode());
+		EnumDemo tester2=EnumDemo.INSTANCE;
+		System.out.println(tester2.hashCode());
 	}
 }
