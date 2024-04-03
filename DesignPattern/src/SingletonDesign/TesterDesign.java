@@ -9,7 +9,7 @@ public class TesterDesign {
 	}
 	
 	//Lazy way to create singleton
-	public static TesterDesign getInstance()
+	public static synchronized TesterDesign getInstance()
 	{
 		
 		if(ref==null)
