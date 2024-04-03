@@ -9,11 +9,16 @@ public class TesterDesign {
 	}
 	
 	//Lazy way to create singleton
-	public static synchronized TesterDesign getInstance()
+	public static TesterDesign getInstance()
 	{
 		
 		if(ref==null)
-			return ref=new TesterDesign();
+		{
+			synchronized (TesterDesign.class) {
+				return ref=new TesterDesign();
+			}
+		}
+			
 			
 		
 		return ref;
